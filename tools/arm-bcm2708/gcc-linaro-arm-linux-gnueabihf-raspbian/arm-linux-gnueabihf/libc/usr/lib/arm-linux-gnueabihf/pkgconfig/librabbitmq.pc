@@ -1,0 +1,13 @@
+prefix=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/arm-linux-gnueabihf
+includedir=${prefix}/include
+
+Name: rabbitmq-c
+Description: An AMQP 0-9-1 client library
+Version: 0.11.0
+URL: https://github.com/alanxz/rabbitmq-c
+Requires.private: openssl
+Libs: -L${libdir} -lrabbitmq
+Libs.private:  -lrt -pthread
+CFlags: -I${includedir}
