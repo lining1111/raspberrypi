@@ -1,0 +1,14 @@
+prefix=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr
+exec_prefix=${prefix}
+libdir=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr/lib
+includedir=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 59.20.100
+Requires: 
+Requires.private: libswresample >= 4.4.100, libavutil >= 57.18.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -liconv -lm -L/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin/../arm-linux-gnueabihf/libc/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr/lib -lx264
+Cflags: -I${includedir}

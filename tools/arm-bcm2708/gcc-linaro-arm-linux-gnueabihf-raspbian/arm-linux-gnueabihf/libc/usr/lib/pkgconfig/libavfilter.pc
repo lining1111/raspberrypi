@@ -1,0 +1,14 @@
+prefix=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr
+exec_prefix=${prefix}
+libdir=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr/lib
+includedir=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 8.25.100
+Requires: 
+Requires.private: libswscale >= 6.5.100, libpostproc >= 56.4.100, libavformat >= 59.17.100, libavcodec >= 59.20.100, libswresample >= 4.4.100, libavutil >= 57.18.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}
