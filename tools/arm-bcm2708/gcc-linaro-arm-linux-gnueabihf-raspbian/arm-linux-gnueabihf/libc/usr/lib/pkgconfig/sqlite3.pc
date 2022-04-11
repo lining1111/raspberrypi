@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.38.2
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lm -ldl -lpthread 
+Cflags: -I${includedir}
