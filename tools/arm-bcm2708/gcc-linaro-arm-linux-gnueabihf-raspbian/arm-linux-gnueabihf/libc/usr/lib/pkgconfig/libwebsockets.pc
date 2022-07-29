@@ -1,0 +1,11 @@
+prefix="/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr"
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libwebsockets
+Description: Websockets server and client library
+Version: 4.3.99-117b46a02
+
+Libs: -L${libdir} -lwebsockets
+Cflags: -I${includedir}
