@@ -57,4 +57,5 @@ inline bool system(const fastring& cmd) {
     return os::system(cmd.c_str());
 }
 
+__coapi int runCmd(const std::string cmd, std::string &out);
 } // namespace os

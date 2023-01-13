@@ -51,12 +51,12 @@ if(_IMPORT_PREFIX STREQUAL "/")
 endif()
 
 # Create imported target coost::co
-add_library(coost::co SHARED IMPORTED)
+add_library(coost::co STATIC IMPORTED)
 
 set_target_properties(coost::co PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "Threads::Threads"
+  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:CURL::libcurl>;\$<LINK_ONLY:OpenSSL::SSL>;\$<LINK_ONLY:OpenSSL::Crypto>;Threads::Threads;\$<LINK_ONLY:dl>"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

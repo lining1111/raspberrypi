@@ -1,1 +1,1 @@
-#define COOST_SHARED 1
+#define COOST_SHARED 0

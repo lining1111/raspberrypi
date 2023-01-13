@@ -1,4 +1,4 @@
-prefix=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin/../arm-linux-gnueabihf/libc/usr
+prefix=/usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib
@@ -7,5 +7,5 @@ Name: coost
 Description: A tiny boost library in C++11.
 Version: 3.0.0
 Cflags: -I${includedir}
-Libs: -L${libdir} -lco -lpthread
-Requires:
+Libs: -L${libdir} -lco -lpthread -ldl
+Requires: libcurl openssl >= 1.1.0

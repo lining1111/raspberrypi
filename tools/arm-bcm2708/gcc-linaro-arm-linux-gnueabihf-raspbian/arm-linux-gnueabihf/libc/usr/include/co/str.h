@@ -4,8 +4,43 @@
 #include "fastring.h"
 #include "stl.h"
 #include <vector>
+#include <bits/codecvt.h>
+#include <wchar.h>
+#include <locale>
+#include <clocale>
 
 namespace str {
+
+/*
+class chs_codecvt : public std::codecvt_byname<wchar_t, char, std::mbstate_t> {
+public:
+    chs_codecvt(std::string s) : codecvt_byname(s.c_str()) {
+
+    }
+};
+
+__coapi std::string Utf8ToGbk(std::string str);
+
+__coapi std::string GbkToUtf8(std::string str);
+
+__coapi std::wstring Utf8ToUnicode(std::string str);
+
+__coapi std::wstring GbkToUnicode(std::string str);
+
+__coapi std::string UnicodeToUtf8(std::wstring str);
+
+__coapi std::string UnicodeToGbk(std::wstring str);
+*/
+
+
+__coapi std::vector<std::string> split(const std::string &in, const std::string &delim);
+
+__coapi void Trim(std::string &str, char trim);
+
+__coapi bool startsWith(const std::string str, const std::string prefix);
+
+__coapi bool endsWith(const std::string str, const std::string suffix);
+
 
 /**
  * split a string 

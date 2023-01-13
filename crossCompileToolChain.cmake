@@ -12,7 +12,19 @@ set(CMAKE_CXX_COMPILER ${CROSS_COMPILE_ROOT}arm-linux-gnueabihf-g++)
 
 # specify install path
 #c
-set(CMAKE_INSTALL_PREFIX ${CROSS_COMPILE_ROOT}../arm-linux-gnueabihf/libc/usr)
+set(CMAKE_INSTALL_PREFIX /usr/local/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/arm-linux-gnueabihf/libc/usr)
+
+#curl
+set(CURL_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include)
+set(CURL_LIBRARY ${CMAKE_INSTALL_PREFIX}/lib/libcurl.so)
+#openssl crypto
+set(OPENSSL_CRYPTO_LIBRARY ${CMAKE_INSTALL_PREFIX}/lib/libcrypto.so)
+
+#openssl ssl
+set(OPENSSL_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include)
+set(OPENSSL_SSL_LIBRARY ${CMAKE_INSTALL_PREFIX}/lib/libssl.so)
+
+
 #c++
 #set(CMAKE_INSTALL_PREFIX ${CROSS_COMPILE_ROOT}../arm-linux-gnueabihf/)
 # where is the target environment 

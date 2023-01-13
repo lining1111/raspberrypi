@@ -3,6 +3,7 @@
 #include "def.h"
 #include "hash/murmur_hash.h"
 #include "hash/crc16.h"
+#include "hash/crc.h"
 #include "hash/md5.h"
 #include "hash/sha256.h"
 #include "hash/base64.h"
